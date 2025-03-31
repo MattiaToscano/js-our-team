@@ -79,4 +79,4 @@ const printTeamMembers = (array) => {
   }
   
   printTeamMembers(teamMembers); //Chiamo la funzione per stampare i membri del team
-
+ 
