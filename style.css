@@ -5,3 +5,17 @@ body{
 h1{
     color:#e43474
 }
+
+
+.card{
+    background-color: black;
+    color: white;
+}
+
+.card img{
+    width: 40%;
+}
+
+#email{
+    color: #4aa2c8;
+}
