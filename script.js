@@ -36,3 +36,32 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+//Recupero elementi dal DOM
+const nameField = document.getElementById("name");
+const roleField = document.getElementById("role");
+const emailField = document.getElementById("email");
+const imgField = document.getElementById("img");
+
+//ciclo per stampare i membri del team 
+
+const createTeamMember = (name, role, email, img) => {
+  
+  //destrutturazione dell'oggetto
+  const {name, role, email, img} = teamMember;
+
+  //Riempio i template con i dati del membro del team
+  const card = 
+        `<div class="col-12 col-md-6 col-lg-4">
+            <div class="team-card mt-5">
+                <div class="card d-flex flex-row ">
+                    <img src="${img}" class="me-3" id="img">
+                    <div>
+                        <h3 class="mb-1 mt-3" id="nome">${name}</h3>
+                        <p class="mb-1" id="ruolo">${ruolo}</p>
+                        <p class="mb-0" id="email">${email}</p>
+                    </div>
+                </div>
+            </div>
+        </div>`
+  
