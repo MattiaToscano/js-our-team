@@ -104,7 +104,7 @@ const printTeamMembers = (array) => {
     //Stampo i membri del team aggiornati
     printTeamMembers(teamMembers);
     
-    //Resetto i campi di input
+    //Resetto i campi di input.
     nameField.value = "";
     roleField.value = "";
     emailField.value = "";
