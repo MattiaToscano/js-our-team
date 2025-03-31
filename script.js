@@ -38,10 +38,11 @@ const teamMembers = [
 ];
 
 //Recupero elementi dal DOM
-const nameField = document.getElementById("name");
-const roleField = document.getElementById("role");
-const emailField = document.getElementById("email");
-const imgField = document.getElementById("img");
+const nameField = document.getElementById("input-name");
+const roleField = document.getElementById("input-role");
+const emailField = document.getElementById("input-email");
+const imgField = document.getElementById("input-img");
+const addButton = document.getElementById("input-button");
 
 //ciclo per stampare i membri del team 
 
@@ -80,3 +81,33 @@ const printTeamMembers = (array) => {
   
   printTeamMembers(teamMembers); //Chiamo la funzione per stampare i membri del team
  
+
+  //Aggiungo evento click al bottone "Aggiungi membro"
+  addButton.addEventListener("click", function() {
+    //Controllo se i campi sono vuoti
+    if (nameField.value === "" || roleField.value === "" || emailField.value === "" || imgField.value === "") {
+      alert("Compila tutti i campi!");
+      return;
+    }
+    
+    //Creo un nuovo membro del team con i dati inseriti nei campi
+    const newMember = {
+      name: nameField.value,
+      role: roleField.value,
+      email: emailField.value,
+      img: imgField.value
+    };
+    
+    //Aggiungo il nuovo membro del team all'array teamMembers
+    teamMembers.push(newMember);
+    
+    //Stampo i membri del team aggiornati
+    printTeamMembers(teamMembers);
+    
+    //Resetto i campi di input
+    nameField.value = "";
+    roleField.value = "";
+    emailField.value = "";
+    imgField.value = "";
+  });
+
