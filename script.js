@@ -67,5 +67,16 @@ const createTeamMember = (member) => {
   return card;  
 }
 
-
+//Funzione per stampare i membri del team
+const printTeamMembers = (array) => {
+  let cards = ""; //Inizializzo la variabile cards come stringa vuota
+  
+  for (let i = 0; i < array.length; i++) {
+    //Chiamo la funzione createTeamMember per ogni membro del team e concateno il risultato alla variabile cards
+    cards += createTeamMember(array[i]); 
+  }
+  document.getElementById("membri-team").innerHTML = cards; //Stampo le card nel div con id "team"
+  }
+  
+  printTeamMembers(teamMembers); //Chiamo la funzione per stampare i membri del team
 
