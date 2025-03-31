@@ -45,10 +45,10 @@ const imgField = document.getElementById("img");
 
 //ciclo per stampare i membri del team 
 
-const createTeamMember = (name, role, email, img) => {
+const createTeamMember = (member) => {
   
   //destrutturazione dell'oggetto
-  const {name, role, email, img} = teamMember;
+  const {name, role, email, img} = member;
 
   //Riempio i template con i dati del membro del team
   const card = 
@@ -58,10 +58,14 @@ const createTeamMember = (name, role, email, img) => {
                     <img src="${img}" class="me-3" id="img">
                     <div>
                         <h3 class="mb-1 mt-3" id="nome">${name}</h3>
-                        <p class="mb-1" id="ruolo">${ruolo}</p>
+                        <p class="mb-1" id="ruolo">${role}</p>
                         <p class="mb-0" id="email">${email}</p>
                     </div>
                 </div>
             </div>
         </div>`
-  
+  return card;  
+}
+
+
+
